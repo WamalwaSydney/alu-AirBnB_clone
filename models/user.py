@@ -1,7 +1,11 @@
 #!/usr/bin/python3
-"""${cls^} module: inherits from BaseModel."""
+"""User module: inherits from BaseModel."""
 from models.base_model import BaseModel
 
 
-class ${cls^}(BaseModel):
-    """${cls^} class: public class attributes."""
+class User(BaseModel):
+    """User class: public class attributes."""
+    email = ""
+    password = ""
+    first_name = ""
+    last_name = ""

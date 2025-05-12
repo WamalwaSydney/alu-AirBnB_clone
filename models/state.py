@@ -1,7 +1,8 @@
 #!/usr/bin/python3
-"""${cls^} module: inherits from BaseModel."""
+"""State module: inherits from BaseModel."""
 from models.base_model import BaseModel
 
 
-class ${cls^}(BaseModel):
-    """${cls^} class: public class attributes."""
+class State(BaseModel):
+    """State class: public class attribute."""
+    name = ""

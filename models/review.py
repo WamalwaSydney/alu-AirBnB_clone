@@ -1,7 +1,10 @@
 #!/usr/bin/python3
-"""${cls^} module: inherits from BaseModel."""
+"""Review module: inherits from BaseModel."""
 from models.base_model import BaseModel
 
 
-class ${cls^}(BaseModel):
-    """${cls^} class: public class attributes."""
+class Review(BaseModel):
+    """Review class: public class attributes."""
+    place_id = ""
+    user_id = ""
+    text = ""

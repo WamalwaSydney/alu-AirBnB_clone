@@ -1,3 +1,7 @@
+#!/usr/bin/env bash
+set -e
+
+cat > console.py << 'EOF'
 #!/usr/bin/python3
 """Console entry point: implements HBNBCommand with cmd module."""
 import cmd
@@ -20,7 +24,6 @@ classes = {
     'Place': Place,
     'Review': Review
 }
-
 
 class HBNBCommand(cmd.Cmd):
     """Command interpreter for AirBnB clone."""
@@ -55,14 +58,11 @@ class HBNBCommand(cmd.Cmd):
         """Show string representation of an instance."""
         args = shlex.split(arg)
         if not args:
-            print("** class name missing **")
-            return
+            print("** class name missing **"); return
         if args[0] not in classes:
-            print("** class doesn't exist **")
-            return
+            print("** class doesn't exist **"); return
         if len(args) < 2:
-            print("** instance id missing **")
-            return
+            print("** instance id missing **"); return
         key = f"{args[0]}.{args[1]}"
         obj = storage.all().get(key)
         if obj:
@@ -74,14 +74,11 @@ class HBNBCommand(cmd.Cmd):
         """Destroy an instance by class name and id."""
         args = shlex.split(arg)
         if not args:
-            print("** class name missing **")
-            return
+            print("** class name missing **"); return
         if args[0] not in classes:
-            print("** class doesn't exist **")
-            return
+            print("** class doesn't exist **"); return
         if len(args) < 2:
-            print("** instance id missing **")
-            return
+            print("** instance id missing **"); return
         key = f"{args[0]}.{args[1]}"
         objs = storage.all()
         if key in objs:
@@ -105,25 +102,19 @@ class HBNBCommand(cmd.Cmd):
         """Update an instance by adding/updating attribute."""
         args = shlex.split(arg)
         if not args:
-            print("** class name missing **")
-            return
+            print("** class name missing **"); return
         if args[0] not in classes:
-            print("** class doesn't exist **")
-            return
+            print("** class doesn't exist **"); return
         if len(args) < 2:
-            print("** instance id missing **")
-            return
+            print("** instance id missing **"); return
         key = f"{args[0]}.{args[1]}"
         objs = storage.all()
         if key not in objs:
-            print("** no instance found **")
-            return
+            print("** no instance found **"); return
         if len(args) < 3:
-            print("** attribute name missing **")
-            return
+            print("** attribute name missing **"); return
         if len(args) < 4:
-            print("** value missing **")
-            return
+            print("** value missing **"); return
 
         obj = objs[key]
         name, value = args[2], args[3]
@@ -139,8 +130,7 @@ class HBNBCommand(cmd.Cmd):
 
     def default(self, line):
         """Handle advanced <Class>.<command>() syntax."""
-        import re
-        import json
+        import re, json
         m = re.fullmatch(r"(\w+)\.(\w+)\((.*)\)", line)
         if not m:
             print("** invalid syntax **")
@@ -180,6 +170,10 @@ class HBNBCommand(cmd.Cmd):
         """Show help for commands."""
         return super().do_help(arg)
 
-
 if __name__ == '__main__':
     HBNBCommand().cmdloop()
+EOF
+
+chmod +x console.py
+echo "✅ console.py has been updated."
+

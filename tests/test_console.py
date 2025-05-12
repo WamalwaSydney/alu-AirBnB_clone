@@ -8,5 +8,9 @@ class TestConsole(unittest.TestCase):
     """Test console help/quit."""
 
     def test_help(self):
-        p = subprocess.run(['./console.py'], input='help\nquit\n', text=True, capture_output=True)
+        p = subprocess.run(
+            ['./console.py'],
+            input='help\nquit\n',
+            text=True,
+            capture_output=True)
         self.assertIn('Documented commands', p.stdout)
