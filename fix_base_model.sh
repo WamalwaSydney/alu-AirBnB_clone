@@ -1,8 +1,11 @@
+#!/usr/bin/env bash
+set -e
+
+cat > models/base_model.py << 'EOF'
 #!/usr/bin/python3
 """BaseModel module: defines all common attributes/methods."""
 import uuid
 from datetime import datetime
-
 
 class BaseModel:
     """BaseModel defines id, created_at, updated_at and serialization."""
@@ -43,3 +46,7 @@ class BaseModel:
         d['created_at'] = self.created_at.isoformat()
         d['updated_at'] = self.updated_at.isoformat()
         return d
+EOF
+
+echo "✅ models/base_model.py has been rewritten to avoid circular imports."
+
