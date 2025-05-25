@@ -1,0 +1,6 @@
+(hbnb) d57c2385-fd71-4e8d-b867-674af18f405d
+(hbnb) 7d7a37b9-5f3b-4b2d-a7d9-a75b9e96084d
+(hbnb) ["[State] (d57c2385-fd71-4e8d-b867-674af18f405d) {'id': 'd57c2385-fd71-4e8d-b867-674af18f405d', 'created_at': datetime.datetime(2025, 5, 25, 12, 15, 53, 126657), 'updated_at': datetime.datetime(2025, 5, 25, 12, 15, 53, 126679)}", "[State] (7d7a37b9-5f3b-4b2d-a7d9-a75b9e96084d) {'id': '7d7a37b9-5f3b-4b2d-a7d9-a75b9e96084d', 'created_at': datetime.datetime(2025, 5, 25, 12, 15, 53, 127002), 'updated_at': datetime.datetime(2025, 5, 25, 12, 15, 53, 127010)}"]
+(hbnb) 0305ba56-3e02-4b44-923f-e0aac2eb8251
+(hbnb) ["[Place] (0305ba56-3e02-4b44-923f-e0aac2eb8251) {'id': '0305ba56-3e02-4b44-923f-e0aac2eb8251', 'created_at': datetime.datetime(2025, 5, 25, 12, 15, 53, 216252), 'updated_at': datetime.datetime(2025, 5, 25, 12, 15, 53, 216271)}"]
+(hbnb) 
