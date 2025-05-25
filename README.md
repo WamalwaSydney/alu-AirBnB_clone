@@ -18,3 +18,7 @@ chmod +x console.py
 ./console.py
 (hbnb) help
 \`\`\`
+
+Authors
+Sydney Erik Wamalwa
+Constantine Akas
